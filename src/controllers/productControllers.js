@@ -59,7 +59,7 @@ const createProduct = async (req, res) => {
       .send({ message: "Error!", error: error.message || "Error!" });
   }
 };
-const updateByIdProduct = async (req, res) => {
+const updateByIdProduct = async (req, res, next) => {
   try {
     const { id } = req.params;
     const { title, price, description, categoryId } = req.body;

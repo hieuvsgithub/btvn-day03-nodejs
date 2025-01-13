@@ -28,6 +28,7 @@ export const register = async (req, res) => {
     console.log(error);
   }
 };
+
 export const login = async (req, res) => {
   try {
     const data = await User.findOne({ email: req.body.email });

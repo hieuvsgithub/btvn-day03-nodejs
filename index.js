@@ -13,7 +13,7 @@ app.use(express.json());
 
 connectDB();
 
-app.use("/", routes);
+app.use("/api", routes);
 
 app.use((req, res, next) => {
   res.status(404).send("Sorry can't find that!");

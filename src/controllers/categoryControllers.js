@@ -86,7 +86,7 @@ const deleteSoftCategory = async (req, res) => {
     const category = await Category.findByIdAndUpdate(
       req.params.id,
       {
-        deletedAt: new Date(),
+        deleteAt: new Date(),
         isHidden: true,
       },
       { new: true }
